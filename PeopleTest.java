@@ -23,7 +23,7 @@ public class PeopleTest {
     professor = new ProfsBody( amysMind, profsMind, bendersMind );
     bender = new BendersBody( amysMind, bendersMind );
     zoidberg = new ZoidbergsBody( amy );
-    amy2 = new AmysBody( amysMind, profsMind, zoidberg );
+    amy = new AmysBody( amysMind, profsMind, zoidberg );
   }
 
   @Test
@@ -53,7 +53,7 @@ public class PeopleTest {
 
   @Test
   public void amyIsConfused() {
-    assertEquals( "I'm Amy", amy2.zoidAmy() );
+    assertEquals( "I'm Amy", amy.zoidAmy() );
   }
 
 
