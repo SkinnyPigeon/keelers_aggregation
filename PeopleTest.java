@@ -4,7 +4,6 @@ import org.junit.*;
 public class PeopleTest {
 
   AmysBody amy;
-  AmysBody amy2;
   ProfsBody professor;
   AmysMind amysMind;
   ProfsMind profsMind;
