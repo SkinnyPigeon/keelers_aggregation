@@ -9,6 +9,7 @@ public class PeopleTest {
   ProfsMind profsMind;
   BendersMind bendersMind;
   BendersBody bender;
+  ZoidbergsBody zoidberg;
 
 
   @Before 
@@ -20,6 +21,7 @@ public class PeopleTest {
     amy = new AmysBody( amysMind, profsMind );
     professor = new ProfsBody( amysMind, profsMind, bendersMind );
     bender = new BendersBody( amysMind, bendersMind );
+    zoidberg = new ZoidbergsBody( amy );
   }
 
   @Test
@@ -40,6 +42,11 @@ public class PeopleTest {
   @Test
   public void profIsBender() {
     assertEquals( "I'm Bender", professor.bender() );
+  }
+
+  @Test
+  public void zoidbergIsAmysBody() {
+    assertEquals( "I'm Amy", zoidberg.amy() );
   }
 
 
