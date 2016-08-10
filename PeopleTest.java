@@ -16,8 +16,9 @@ public class PeopleTest {
     amysMind = new AmysMind();
     profsMind = new ProfsMind();
     bendersMind = new BendersMind();
+
     amy = new AmysBody( amysMind, profsMind );
-    professor = new ProfsBody( amysMind, profsMind );
+    professor = new ProfsBody( amysMind, profsMind, bendersMind );
     bender = new BendersBody( amysMind, bendersMind );
   }
 
@@ -34,6 +35,11 @@ public class PeopleTest {
   @Test
   public void benderIsAmy() {
     assertEquals( "I'm Amy", bender.amy() );
+  }
+
+  @Test
+  public void profIsBender() {
+    assertEquals( "I'm Bender", professor.bender() );
   }
 
 
